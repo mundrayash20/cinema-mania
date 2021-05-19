@@ -1,0 +1,34 @@
+<section class="hero">
+    <div class="hero-body">
+        <nav class="breadcrumb" aria-label="breadcrumbs">
+            <ul>
+              <li>
+                <div class="movie-link" routerLink="/" routerLinkActive="active">
+                  <!-- <span class="icon is-small">
+                    <img src="https://img.icons8.com/android/24/000000/home.png"/>
+                  </span>
+                   -->
+                   <span  class="is-size-5">Movies</span>
+                </div>
+              </li>
+              <li *ngIf="movie">
+                <div class="movie-link " class="movie-link" routerLink="/description/{{movie.id}}" routerLinkActive="active" >
+                  <!-- <span class="icon is-small">                    
+                    <img src="https://img.icons8.com/metro/26/000000/create-new.png"/>
+                  </span>
+                   -->
+                   <span  class="is-size-5">{{movie.name}}</span>
+                </div>
+              </li>
+              <li *ngIf="theatre">
+                <div class="movie-link--disabled " >
+                  <span class="icon is-small">
+                    <img  src="https://img.icons8.com/material-rounded/24/000000/bus-seat-top-view.png"/>
+                  </span>
+                  <span  class="is-size-5">{{theatre.name}}</span>
+                </div>
+              </li>
+              </ul>
+              </nav>
+    </div>
+  </section>

@@ -1,0 +1,7 @@
+<section class=" mt-5">
+    <p class="is-size-4 level"><span class="level-left"><span class="level-item"><img src="https://img.icons8.com/fluent-systems-filled/48/000000/region-code.png" class="image is-24x24"/>Theatres near</span></span></p>
+<div class="level"><div class="level-left" >
+    <button  [routerLink]="'/seat-selection/'+movie_id+'/'+theatre.id" class="button is-outlined  mx-2 movie-link" *ngFor="let theatre of theatres;let i=index">{{theatre.name}} </button>
+ </div>  
+ </div>
+</section>

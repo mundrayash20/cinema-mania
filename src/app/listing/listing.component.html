@@ -1,0 +1,36 @@
+<section class="hero">
+    <div class="hero-body">
+      <nav class="level">
+          <!-- Left side -->
+          <div class="level-left">
+            <div class="level-item">
+              <h1 class="is-size-1"><b>Cinema Mania</b></h1>
+            </div>
+        
+          </div>
+        
+          <!-- Right side -->
+          <!-- <div class="level-right search-bar">
+              <div class="level-item">
+                  <div class="field ">
+                      <p class="control has-icons-left has-icons-right">
+                          <input class="input  is-rounded search-bar__input" [(ngModel)]="searchterm" type="text" placeholder="Search for Movies">
+                          <span class="icon is-small is-left">
+                              <figure class="image is-24x24">
+                                  <img src="https://img.icons8.com/ios-filled/50/000000/search--v1.png"/>
+                                </figure>
+                          </span>
+                        </p>
+                  </div>
+                </div>
+          </div> -->
+        </nav>
+   </div>
+   <section class="section px-6">
+   <div class="columns is-desktop is-multiline is-variable is-1-mobile is-0-tablet is-5-desktop">
+       <div class="column is-3" *ngFor="let movie of (bookings | async).movies">
+           <app-movie [movie]="movie"></app-movie>
+       </div>
+   </div>
+   </section>
+  </section>

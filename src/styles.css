@@ -1,0 +1,152 @@
+/* You can add global styles to this file, and also import other style files */
+/* You can add global styles to this file, and also import other style files */
+body {
+    font-family: 'Nunito';
+    font-weight: 600;
+    background-color: #f0f2f5;
+    min-height: 100vh;
+}
+#MovieApp .search-bar__input {
+    background-color: #f0f2f5;
+    border: none;
+    border-bottom: 1px solid black;
+    box-shadow: none;
+    border-radius: 0;
+}
+#MovieApp .search-bar__input:focus, #MovieApp .search-bar__input:hover {
+    border: none;
+    box-shadow: none;
+    border-bottom: 1px solid black;
+}
+#MovieApp .search-bar .control.has-icons-left .icon, #MovieApp .search-bar .control.has-icons-right .icon {
+    width: 1.5em;
+}
+#MovieApp .search-bar ::-webkit-input-placeholder {
+   /* Chrome/Opera/Safari */
+    color: #262624;
+}
+#MovieApp .search-bar ::-moz-placeholder {
+   /* Firefox 19+ */
+    color: #262624;
+}
+#MovieApp .search-bar :-ms-input-placeholder {
+   /* IE 10+ */
+    color: #262624;
+}
+#MovieApp .search-bar :-moz-placeholder {
+   /* Firefox 18- */
+    color: #262624;
+}
+#MovieApp .movie-link {
+    cursor: pointer;
+}
+#MovieApp .movie-link--disabled {
+    cursor: default;
+}
+#MovieApp .movie-desciption {
+    padding: 3em;
+}
+#MovieApp .breadcrumb li {
+    margin-right: 0.5em;
+}
+#MovieApp .breadcrumb .icon {
+    margin-right: 0.5em;
+    margin-left: 0.5em;
+}
+#MovieApp .button--transparent {
+    background-color: transparent;
+}
+#MovieApp .movie-container .movie-container {
+    margin: 20px 0px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    flex-direction: column;
+}
+#MovieApp .movie-container .movie-container select {
+    appearance: none;
+    -moz-appearance: none;
+    -webkit-appearance: none;
+    border: 0;
+    padding: 5px 15px;
+    margin-bottom: 40px;
+    font-size: 14px;
+    border-radius: 5px;
+}
+#MovieApp .movie-container .container {
+    perspective: 1000px;
+    margin: 40px 0;
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+#MovieApp .movie-container .seat {
+    background-color: #444451;
+    height: 30px;
+    color: white;
+    width: 30px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 3px;
+    border-top-left-radius: 10px;
+    border-top-right-radius: 10px;
+    user-select: none;
+}
+#MovieApp .movie-container .selected {
+    background-color: #136695;
+}
+#MovieApp .movie-container .occupied {
+    background-color: #aaa;
+}
+#MovieApp .movie-container .seat:not(.occupied):hover {
+    cursor: pointer;
+    transform: scale(1.2);
+}
+#MovieApp .movie-container .showcase .seat:not(.occupied):hover {
+    cursor: default;
+    transform: scale(1);
+}
+#MovieApp .movie-container .showcase {
+    display: flex;
+    justify-content: space-between;
+    list-style-type: none;
+    background: rgba(0, 0, 0, 0.1);
+    padding: 5px 10px;
+    border-radius: 5px;
+    color: #777;
+}
+#MovieApp .movie-container .showcase li {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    margin: 0 10px;
+}
+#MovieApp .movie-container .showcase li small {
+    margin-left: 2px;
+}
+#MovieApp .movie-container .row {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#MovieApp .movie-container .screen {
+    border: 2px solid #444451;
+    height: 90px;
+    width: 250px;
+    margin: 15px 0;
+    transform: rotateX(-45deg);
+    box-shadow: 0 3px 10px #000;
+}
+#MovieApp .movie-container p.text {
+    margin: 40px 0;
+}
+#MovieApp .movie-container p.text span {
+    color: #0081cb;
+    font-weight: 600;
+    box-sizing: content-box;
+}
+#MovieApp .movie-container .credits a {
+    color: #fff;
+}

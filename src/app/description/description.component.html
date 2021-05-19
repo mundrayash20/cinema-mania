@@ -1,0 +1,33 @@
+<div *ngIf="(bookings|async).status.movieSelected">
+    <app-breadcrumb [movie]="(bookings|async).selected.movie"></app-breadcrumb>
+    <div class="movie-desciption " >
+    <div class="columns   is-vcentered">
+        <div class="column is-3">
+        <div class="px-3">
+        <div class="card">
+            <div class="card-image">
+              <figure class="image is-4by5">
+                <img [src]="(bookings|async).selected.movie.poster" alt="Placeholder image">
+              </figure>
+            </div>
+          </div>
+     
+        </div>
+    </div>
+    <div class="colum is-3" >
+        <div class="columns is-centered ">
+            <div class="column " >
+                <p class="is-size-2 mt-1">{{(bookings|async).selected.movie.name}}</p>
+                <p class="is-size-6 mt-1"><span class="has-text-grey">Type : </span>{{(bookings|async).selected.movie.type}}</p>
+                <p class="is-size-6 mt-1"><span class="has-text-grey">Time : </span>{{(bookings|async).selected.movie.time}}</p>
+                <p class="is-size-6 mt-1"><span class="has-text-grey">Released : </span>{{(bookings|async).selected.movie.date}}</p>
+                <p class="is-size-6 mt-1"><span></span>{{(bookings|async).selected.movie.description}}</p>
+                </div>
+            
+            </div>
+    </div>
+    </div>
+    
+    <app-theatres [theatres]="(bookings|async).selected.movie.theatre" [movie_id]="(bookings|async).selected.movie.id"></app-theatres>
+    </div>
+    </div>

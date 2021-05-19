@@ -1,0 +1,55 @@
+<app-breadcrumb [movie]="(bookings|async).selected.movie" [theatre]="(bookings|async).selected.theatre"></app-breadcrumb>
+<section class="section" *ngIf="seats.length>0">
+  <div *ngIf="!orderStatus">
+    <div class="movie-container">
+        
+        <div class="columns is-centered">
+            <div class="column is-6">
+        <div class="container">
+          <div class="screen"></div>
+
+          <div *ngFor="let seat of seats; let i = index">
+
+            <div *ngIf="i % 3 == 0" class="row">
+            <div *ngIf="i  < seats.length"  class="seat"     [class.selected]="seats[i].selected"  [class.occupied]="!seats[i].status" (click)="seatSelected(i)">{{ seats[i].name }}</div>
+              <div *ngIf="i + 1 < seats.length" class="seat" [class.selected]="seats[i+1].selected"  [class.occupied]="!seats[i+1].status" (click)="seatSelected(i+1)">{{ seats[i + 1].name }}</div>
+              <div *ngIf="i + 2 < seats.length" class="seat" [class.selected]="seats[i+2].selected"  [class.occupied]="!seats[i+2].status" (click)="seatSelected(i+2)">{{ seats[i + 2].name }}</div>
+            </div>
+          </div>
+
+          
+     
+          <p class="text">
+            You have selected <span id="count">{{count}}</span> seats for the total price of Rs. <span id="total">{{totalprice}}</span>
+          </p>
+          <p *ngIf="count>0"><button class="button" (click)="confirmSeat()">Confirm Seats</button></p>
+        </div>
+        </div>
+      </div>
+    </div>
+    </div>
+    <div *ngIf="orderStatus">
+      <section class="hero  ">
+        <div class="hero-body">
+          <p class="title has-text-centered">
+            Order Success
+          </p>
+          <div class="subtitle has-text-centered">
+            <h1>Order id : {{orderdetails.id}}</h1>
+            <h1>Movie : {{orderdetails.movie}}</h1>
+            <h1>Theatre : {{orderdetails.theatre}}</h1>
+            <h1>Seat : {{orderdetails.seat}}</h1>
+            <h1>Price : {{orderdetails.price}}</h1>
+          </div>
+        </div>
+        
+       
+      </section>
+      <section class="has-text-centered">
+        <button class="button"  routerLink="/" routerLinkActive="active">
+          Go Back To Home
+         </button>
+      </section>
+     
+      </div>
+</section>

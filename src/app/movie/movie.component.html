@@ -1,0 +1,13 @@
+<div class="movie-link" routerLink="/description/{{movie.id}}" routerLinkActive="active" >
+    <div class="mb-5 px-3">
+    <div class="card">
+        <div class="card-image">
+          <figure class="image is-4by5">
+            <img [src]="movie.poster" alt="Placeholder image">
+          </figure>
+        </div>
+      </div>
+     <p class="is-size-4 mt-4">{{movie.name}}</p>
+     <p class="is-size-6 mt-1">{{movie.type}}</p>
+    </div>
+    </div>
